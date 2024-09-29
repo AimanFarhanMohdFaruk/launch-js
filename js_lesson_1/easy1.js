@@ -34,3 +34,26 @@ function shortLongShort(string1, string2) {
 }
 console.log(shortLongShort("abc", "defgh") === "abcdefghabc"); // "abcdefghabc"
 console.log(shortLongShort("", "xyz") === "xyz");
+
+function multisum(number) {
+  let iterator = 0;
+  let currentSum = 0;
+  while (iterator < number) {
+    if (iterator % 3 === 0 || iterator % 5 === 0) {
+      currentSum += iterator;
+    }
+    iterator++;
+  }
+  return (currentSum += number);
+}
+console.log(multisum(1000)); // 234168
+
+function utf16Value(string) {
+  let sum = 0;
+  for (const char of string) {
+    let value = char.charCodeAt();
+    sum += value;
+  }
+  return sum;
+}
+console.log(utf16Value("Four score")); // 984)
