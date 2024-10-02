@@ -200,7 +200,7 @@ function century(year) {
   if (year < 100) {
     return "1st";
   }
-  debugger;
+
   let number = year / 100;
   let flooredYear = Math.floor(number);
 
