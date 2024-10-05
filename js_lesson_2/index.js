@@ -1,8 +1,8 @@
-let num = 5;
-
-function myFunc() {
-  console.log(num);
+function changeMyWords(words) {
+  console.log(words);
+  words = ["Hi", "Goodbye"];
 }
 
-myFunc();
-console.log(num);
+let myWords = ["Hello", "Goodbye"];
+changeMyWords(myWords);
+console.log(myWords);
