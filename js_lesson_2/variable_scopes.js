@@ -39,14 +39,15 @@ console.log(myVarNoArgument);
 // IMPORTANT!!! Personally, the most confusing aspect of this topic.
 // Take note of the function's parameters.
 // it takes in myVar4 as a parameter,
-// however, on line <50>, we are requesting to change
+// however, on line <52>, we are requesting to change
 // what the variable myVar4 is pointing to, from the argument passed in the function,
 // to a new primitive value 2.
 // IMPORTANT TAKEAWAY, when you re-assign the the parameter to another value,
 // you BREAK the link to the original value / reference.
-// After line 57 here, you have no way of retrieving what was sent as an argument
+// After line 52 here, you have no way of retrieving what was sent as an argument
 let myVar4 = 1;
 function myFunc4(myVar4) {
+  // function parameters acts as local variables
   console.log(myVar4);
   myVar4 = 2;
 }
@@ -125,14 +126,12 @@ doit(3);
 console.log(a); // => 1
 
 // IMPORTANT
-// in the case below, it might be a surpise that line 138 throws a reference error.
+// in the case below, it might be a surpise that this throws a reference error.
 // This is because of Javascript's Temporal Dead Zone.
-
 let num2 = 5;
 function myFunc9() {
-  console.log(num2);
+  console.log(num2); // reference error
   let num2 = 10;
 }
-
 myFunc9();
 console.log(num2);

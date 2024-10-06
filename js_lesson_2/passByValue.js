@@ -19,8 +19,6 @@ function addName(arr) {
   console.log(arr === reference); // false
 }
 let names1 = ["bob", "kim"];
-addName(names1, "jim");
-console.log(names1); // => [ 'bob', 'kim', ]
 
 // The function below causes a mutation to the original array since
 // objects are passed by reference.
@@ -62,7 +60,7 @@ changeMyWord(myWord);
 console.log(myWord); // "Hello"
 
 // unlike above, this time, the function RETURNS a value.
-// that value is then used in line 72 to reassign the variable myWord 2 with the new value
+// that value is then used in line 71 to reassign the variable myWord2 with the new value
 function changeMyWord2(word) {
   console.log(word);
   word = word.toUpperCase();
@@ -85,20 +83,22 @@ console.log(myWord3);
 console.log(myOtherWord);
 
 // Here, the variable myWords will cause changeMyWords to receive a reference.
-// it then mutates it on line 90
+// it then mutates it on line 88
 function changeMyWords(words) {
   words[0] = "Hi";
 }
 let myWords = ["Hello", "Goodbye"];
 changeMyWords(myWords);
-console.log(myWords);
+console.log(myWords); // ["Hi", "Goodbye"]
 
 // IMPORTANT, here, it doesn't mutate the original array.
-// BECAUSE, it re-assigns the initial variable words to a new value.
+// BECAUSE, it re-assigns the initial variable `words` to a new value.
 // this breaks the link to the original array.
+// after line 100, you are no longer able to reference the original array passed to you
 function changeMyWords2(words) {
   console.log(words);
   words = ["Hi", "Goodbye"];
+  console.log(words === myWords2); // false
 }
 
 let myWords2 = ["Hello", "Goodbye"];
