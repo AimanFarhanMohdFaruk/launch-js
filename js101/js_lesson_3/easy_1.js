@@ -6,12 +6,21 @@ function endsWithExclaimation(string) {
 
   return false;
 }
+// suggestion:
+// use str1.endsWith("!");
 console.log(endsWithExclaimation(str1));
 console.log(endsWithExclaimation(str2));
 
 // Q3
 let ages = { Herman: 32, Lily: 30, Grandpa: 402, Eddie: 10 };
 console.log(ages.hasOwnProperty("Spot"));
+
+let munstersDescription = "the Munsters are CREEPY and Spooky.";
+// => The munsters are creepy and spooky.
+console.log(
+  munstersDescription.charAt(0).toUpperCase() +
+    munstersDescription.substring(1).toLowerCase()
+);
 
 //Q5:
 console.log(false == "0"); // true, because 0 is a falsy. implicit coercions

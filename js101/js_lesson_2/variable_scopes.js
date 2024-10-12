@@ -43,7 +43,7 @@ console.log(myVarNoArgument);
 // what the variable myVar4 is pointing to, from the argument passed in the function,
 // to a new primitive value 2.
 // IMPORTANT TAKEAWAY, when you re-assign the the parameter to another value,
-// you BREAK the link to the original value / reference.
+// you BREAK the link to the original reference.
 // After line 52 here, you have no way of retrieving what was sent as an argument
 let myVar4 = 1;
 function myFunc4(myVar4) {

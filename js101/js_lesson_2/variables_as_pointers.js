@@ -39,8 +39,8 @@ let myWords1 = ["Hello", "Goodbye"];
 let myOtherWords1 = myWords1;
 myWords1 = ["Hi", "Bye"];
 
-console.log(myWords1);
-console.log(myOtherWords1);
+console.log(myWords1); // ["Hi", "Bye"];
+console.log(myOtherWords1); // ["Hello", "Goodbye"];
 
 // When using myWords[0] to assign a value, we maintain
 // the rule of primitives being sent out as values rather than references
