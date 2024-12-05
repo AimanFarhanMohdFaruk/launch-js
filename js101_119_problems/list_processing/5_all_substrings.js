@@ -6,20 +6,24 @@ function substrings(string) {
   // set endPos to current character's position + 1
   // take the substring, from string(currentPositon, endPos)
   // increase the endPos
+  let words = string.split(" ");
   let result = [];
-  for (let i = 0; i < string.length; i++) {
-    let currentCharPos = i;
-    let endPos = currentCharPos + 1;
-    for (let i = currentCharPos; i < string.length; i++) {
-      result.push(string.substring(currentCharPos, endPos));
-      endPos++;
+
+  words.forEach((word) => {
+    for (let i = 0; i < word.length; i++) {
+      let currentCharPos = i;
+      let endPos = currentCharPos + 1;
+      for (let i = currentCharPos; i < word.length; i++) {
+        result.push(word.substring(currentCharPos, endPos));
+        endPos++;
+      }
     }
-  }
+  });
 
   return result;
 }
 
-console.log(substrings("abcde"));
+// console.log(substrings("abcde sdfsd"));
 
 // returns
 [
@@ -39,3 +43,7 @@ console.log(substrings("abcde"));
   "de",
   "e",
 ];
+
+module.exports = {
+  substrings,
+};
