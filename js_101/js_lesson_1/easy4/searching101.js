@@ -1,4 +1,4 @@
-const helpers = require("../../js_lesson_2/helpers");
+const helpers = require("../../../helpers");
 let readLine = require("readline-sync");
 
 NUMBERS_COUNT = 6;
